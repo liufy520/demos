@@ -1,0 +1,50 @@
+
+Virgo Samples
+=============
+
+This is a collection of six sample projects that demonstrate different features of Virgo 
+and different ways of setting up your project in Eclispe. Most samples contain more detailed 
+READMEs in their respective directories. The 'bin' directory contains built Artifacts and 
+source jars for all the samples.
+
+The six sample projects are:
+
+OSGi-examples
+=============
+
+This is a good starting place if you are new to OSGi, this sample dose not use Virgo and shows 
+the basic concepts of OSGi modularity.
+
+No Spring
+=========
+
+This is a simple web application that isn't powered by Spring but still uses the traditional 
+Servlet container, another approach would be to use the OSGi HTTPService.
+
+Formtags
+========
+
+This is a Spring powered web app that is shown in four different states as it is transformed 
+from a legacy 'WAR' file to an OSGi application.
+
+	1. Legacy 'WAR' based web application.
+	2. Shared Libs application, a single bundle with its dependancies removed.
+	3. Shared Services application now consisting of several OSGi bundles.
+	4. PAR file packaging the bundles of the application together.
+
+REST
+====
+
+This is an example of using the Spring REST features to publish a restFull API from an OSGi 
+application. It contains it's own detailed README.
+
+Configuration Properties
+========================
+
+This simple sample shows how to configure your OSGi application using configuration artifacts.
+
+GreenPages
+==========
+
+This is a much more complex and realistic application. The 'docs' directory contains very 
+detailed information on this project.

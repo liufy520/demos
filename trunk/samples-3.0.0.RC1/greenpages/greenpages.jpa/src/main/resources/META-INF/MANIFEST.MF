@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Import-Bundle: com.springsource.org.eclipse.persistence;version="[2.0.
+ 0, 2.1.0)",com.springsource.org.eclipse.persistence.jpa;version="[2.0
+ .0, 2.1.0)"
+Bundle-Vendor: SpringSource
+Bundle-Version: 3.0.0
+Tool: Bundlor 1.1.2.RELEASE
+Bundle-Name: GreenPages JPA
+Bundle-ManifestVersion: 2
+Import-Package: greenpages;version="[3.0, 4.0)",javax.persistence;vers
+ ion="[2, 2.1)",javax.persistence.criteria;version="[2, 2.1)",javax.sq
+ l;version="0",org.apache.commons.dbcp;version="[1.2.2.osgi, 1.2.2.osg
+ i]",org.springframework.beans.factory.annotation;version="[3.0, 3.5)"
+ ,org.springframework.context.weaving;version="[3.0, 3.5)",org.springf
+ ramework.core.io;version="[3.0, 3.5)",org.springframework.dao.annotat
+ ion;version="[3.0, 3.5)",org.springframework.orm.jpa;version="[3.0, 3
+ .5)",org.springframework.orm.jpa.vendor;version="[3.0, 3.5)",org.spri
+ ngframework.stereotype;version="[3.0, 3.5)",org.springframework.trans
+ action.annotation;version="[3.0, 3.5)",org.springframework.transactio
+ n.aspectj;version="[3.0, 3.5)"
+Bundle-SymbolicName: greenpages.jpa
+

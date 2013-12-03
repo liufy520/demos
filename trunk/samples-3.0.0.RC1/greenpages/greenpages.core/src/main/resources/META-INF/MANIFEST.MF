@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Export-Package: greenpages;version="3.0.0"
+Bundle-Vendor: SpringSource Inc.
+Bundle-Version: 3.0.0
+Tool: Bundlor 1.1.2.RELEASE
+Bundle-Name: GreenPages Service
+Bundle-ManifestVersion: 2
+Import-Package: org.springframework.stereotype;version="[3.0, 3.5)"
+Bundle-SymbolicName: greenpages.core
+

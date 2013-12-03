@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-Version: 3.0.0
+Bundle-ManifestVersion: 2
+Bundle-Name: FormTags Par Service (and implementation)
+Bundle-SymbolicName: org.eclipse.virgo.samples.formtags.par.service
+Import-Package: org.eclipse.virgo.samples.formtags.par.domain
+Export-Package: org.eclipse.virgo.samples.formtags.par.service
+

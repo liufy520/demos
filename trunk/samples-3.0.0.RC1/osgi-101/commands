@@ -1,0 +1,4 @@
+install file:bundle.x/target/classes
+install file:bundle.y1/target/classes
+install file:bundle.y2/target/classes
+install file:bundle.z/target/classes

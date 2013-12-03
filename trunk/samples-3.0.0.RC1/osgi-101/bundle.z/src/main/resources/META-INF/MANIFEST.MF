@@ -1,0 +1,7 @@
+Manifest-Version: 1
+Bundle-ManifestVersion: 2
+Bundle-Name: Z Bundle
+Bundle-SymbolicName: bundle.z
+Bundle-Version: 1.0
+Export-Package: r;version="1.0";uses:="p"
+Import-Package: p;version="[1.2.3, 1.2.4)"

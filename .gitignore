@@ -8,3 +8,6 @@
 *.classpath
 *settings*
 *target*
+.settings
+.idea/
+*.iml

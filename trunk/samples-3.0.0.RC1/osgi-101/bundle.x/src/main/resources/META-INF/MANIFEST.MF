@@ -1,0 +1,7 @@
+Manifest-Version: 1
+Bundle-ManifestVersion: 2
+Bundle-Name: X Bundle
+Bundle-SymbolicName: bundle.x
+Bundle-Version: 1.0
+Import-Package: p;version="1.2.3",q;version="[1.2, 1.3)"
+

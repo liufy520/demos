@@ -1,0 +1,6 @@
+Manifest-Version: 1
+Bundle-ManifestVersion: 2
+Bundle-Name: Y Bundle
+Bundle-SymbolicName: bundle.y
+Bundle-Version: 1.0
+Export-Package: p;version="1.2.3",q;version="1.2.4"

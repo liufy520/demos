@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ClassPath: .,WEB-INF/classes
+Bundle-Version: 3.0.0
+Tool: Bundlor 1.1.2.RELEASE
+Bundle-Name: Sample No Spring
+Bundle-ManifestVersion: 2
+Import-Package: javax.servlet;version="[2.6,4)",javax.servlet.http;ver
+ sion="[2.6,4)",org.slf4j;version="[1.7.2,2)"
+Bundle-SymbolicName: org.eclipse.virgo.samples.no.spring
+Web-ContextPath: /nospring
+

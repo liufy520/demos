@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>
+                [%d{HH:mm:ss}] [%-5level] [%-30logger{0}][%-3L] [SeqId:%X{SeqId}] - %msg%n
+            </pattern>
+        </layout>
+    </appender>
+	<appender name="RocketmqClientAppender"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${user.home}/logs/rocketmqlogs/rocketmq_client.log</file>
+		<append>true</append>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${user.home}/logs/rocketmqlogs/otherdays/rocketmq_client-%d{yyyy-MM-dd}.%i.log
+			</fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>104857600</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+			<MaxHistory>10</MaxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%d{yyy-MM-dd HH:mm:ss,GMT+8} %p %t - %m%n</pattern>
+			<charset class="java.nio.charset.Charset">UTF-8</charset>
+		</encoder>
+	</appender>
+
+	<logger name="RocketmqCommon" additivity="false">
+		<level value="warn" />
+		<appender-ref ref="stdout" />
+	</logger>
+
+	<logger name="RocketmqRemoting" additivity="false">
+		<level value="warn" />
+		<appender-ref ref="stdout" />
+	</logger>
+
+	<logger name="RocketmqClient" additivity="false">
+		<level value="warn" />
+		<appender-ref ref="stdout" />
+	</logger>
+	
+    <logger name="com.alibaba.rocketmq.client" additivity="false">
+        <level value="info" />
+        <appender-ref ref="stdout" />
+    </logger>
+    <root level="debug">
+        <appender-ref ref="stdout" />
+    </root>
+
+</configuration>
