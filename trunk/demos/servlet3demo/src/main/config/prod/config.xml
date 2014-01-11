@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config>
+	
+	<!-- 运行环境设置(local/server) -->
+	<enviornment>server</enviornment>
+	
+	<!-- 是否启用缓存 -->
+	<isCache>true</isCache>
+	
+	<!-- 资源或内容对象在缓存中缓存的时间长度（秒） -->
+	<cacheSeconds>1800</cacheSeconds>
+	
+	<!-- 内容迭代器线程池线程数，默认值为10 -->
+	<iteratorThreadPoolSize>10</iteratorThreadPoolSize>
+
+	<!-- 处理单个遍历请求的迭代器个数，默认值为20 -->
+	<iteratorCount>20</iteratorCount>
+</Config>

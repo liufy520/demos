@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config>
+	<encoding>UTF-8</encoding>
+	<!-- hbase(新现网开放平台)-->
+	<Hbase>
+		<zookeeperQuorum>10.10.160.139</zookeeperQuorum>
+		<timeout>50000</timeout>
+	</Hbase> 
+</Config>

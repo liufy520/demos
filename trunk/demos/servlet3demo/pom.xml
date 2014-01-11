@@ -1,0 +1,77 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.panguso.op.data</groupId>
+	<artifactId>servlet3demo</artifactId>
+	<packaging>war</packaging>
+	<name>servlet3</name>
+	<url>http://maven.apache.org</url>
+
+	<parent>
+		<groupId>demos</groupId>
+		<artifactId>demos-parent</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+
+	<dependencies>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1-b02</version>
+			<type>jar</type>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration></configuration>
+			</plugin>
+			<plugin>
+				<!-- 参考API http://ant.apache.org/manual/tasksoverview.html -->
+				<artifactId>maven-antrun-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>process-sources</phase>
+						<id>process-sources</id>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<!-- <copy todir="${project.build.outputDirectory}/com/panguso/op/data/tool/dao/sql/"> 
+									<fileset dir="${project.build.sourceDirectory}/com/panguso/op/data/tool/dao/sql/" 
+									includes="*.xml" /> </copy> -->
+								<!-- 拷贝config -->
+								<delete includeemptydirs="true" quiet="true">
+									<fileset dir="${project.build.directory}/deploy/config/"
+										defaultexcludes="true" />
+								</delete>
+								<copy todir="${project.build.directory}/deploy/config">
+									<fileset dir="src/main/config" />
+								</copy>
+							</tasks>
+						</configuration>
+					</execution>
+					<execution>
+						<phase>package</phase>
+						<id>package</id>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<mkdir dir="${project.build.directory}/deploy" />
+								<copy
+									file="${project.build.directory}/${project.build.finalName}.war"
+									todir="${project.build.directory}/deploy" />
+							</tasks>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>
