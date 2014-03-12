@@ -38,7 +38,7 @@ public class SendMessageTest {
         MQClientAPIImpl client = new MQClientAPIImpl(new NettyClientConfig(), null);
         client.start();
 
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 1; i++) {
             String topic = "UnitTestTopic_" + i % 3;
             Message msg =
                     new Message(topic, "TAG1 TAG2", "100200300", ("Hello, Nice world\t" + i).getBytes());
@@ -57,7 +57,7 @@ public class SendMessageTest {
                 requestHeader.setProperties(MessageDecoder.messageProperties2String(msg.getProperties()));
 
                 SendResult result =
-                        client.sendMessage("127.0.0.1:10911", "brokerName", msg, requestHeader, 1000 * 5,
+                        client.sendMessage("192.168.68.239:8888", "brokerName", msg, requestHeader, 1000 * 5,
                             CommunicationMode.SYNC, null);
                 System.out.println(i + "\t" + result);
             }

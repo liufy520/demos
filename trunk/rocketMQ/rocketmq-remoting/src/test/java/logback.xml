@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>
+                [%d{HH:mm:ss}] [%-10thread] [%-5level] [%-30logger{0}][%-4L] - %msg%n
+            </pattern>
+        </layout>
+    </appender>
+
+    <logger name="com.alibaba.rocketmq.client" additivity="false">
+        <level value="info" />
+        <appender-ref ref="stdout" />
+    </logger>
+    <root level="info">
+        <appender-ref ref="stdout" />
+    </root>
+
+</configuration>

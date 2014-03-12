@@ -62,7 +62,7 @@ public class NettyRPCTest {
         RemotingServer server = createRemotingServer();
         RemotingClient client = createRemotingClient();
 
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 1; i++) {
             TestRequestHeader requestHeader = new TestRequestHeader();
             requestHeader.setCount(i);
             requestHeader.setMessageTitle("HelloMessageTitle");

@@ -31,7 +31,6 @@ import java.util.concurrent.locks.ReentrantLock;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.alibaba.rocketmq.common.constant.LoggerName;
 import com.alibaba.rocketmq.remoting.common.RemotingHelper;
 import com.alibaba.rocketmq.remoting.common.RemotingUtil;
 
@@ -43,7 +42,7 @@ import com.alibaba.rocketmq.remoting.common.RemotingUtil;
  * @since 2013-7-26
  */
 public class ProducerManager {
-    private static final Logger log = LoggerFactory.getLogger(LoggerName.BrokerLoggerName);
+    private static final Logger log = LoggerFactory.getLogger(ProducerManager.class);
     private static final long LockTimeoutMillis = 3000;
     private static final long ChannelExpiredTimeout = 1000 * 120;
     private final Random random = new Random(System.currentTimeMillis());

@@ -26,7 +26,7 @@ import org.slf4j.LoggerFactory;
  * @since 2013-7-13
  */
 public abstract class ServiceThread implements Runnable {
-    private static final Logger stlog = LoggerFactory.getLogger(RemotingHelper.RemotingLogName);
+    private static final Logger stlog = LoggerFactory.getLogger(ServiceThread.class);
     // 执行线程
     protected final Thread thread;
     // 线程回收时间，默认90S

@@ -56,7 +56,6 @@ import com.alibaba.rocketmq.common.BrokerConfig;
 import com.alibaba.rocketmq.common.DataVersion;
 import com.alibaba.rocketmq.common.MixAll;
 import com.alibaba.rocketmq.common.UtilAll;
-import com.alibaba.rocketmq.common.constant.LoggerName;
 import com.alibaba.rocketmq.common.namesrv.RegisterBrokerResult;
 import com.alibaba.rocketmq.common.protocol.MQProtos;
 import com.alibaba.rocketmq.common.protocol.body.TopicConfigSerializeWrapper;
@@ -78,7 +77,7 @@ import com.alibaba.rocketmq.store.config.MessageStoreConfig;
  * @since 2013-7-26
  */
 public class BrokerController {
-    private static final Logger log = LoggerFactory.getLogger(LoggerName.BrokerLoggerName);
+    private static final Logger log = LoggerFactory.getLogger(BrokerController.class);
     // 服务器配置
     private final BrokerConfig brokerConfig;
     // 通信层配置

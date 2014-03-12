@@ -53,7 +53,7 @@ import com.alibaba.rocketmq.remoting.protocol.RemotingProtos.ResponseCode;
  * @since 2013-7-13
  */
 public abstract class NettyRemotingAbstract {
-    private static final Logger plog = LoggerFactory.getLogger(RemotingHelper.RemotingLogName);
+    private static final Logger plog = LoggerFactory.getLogger(NettyRemotingAbstract.class);
 
     // 信号量，Oneway情况会使用，防止本地Netty缓存请求过多
     protected final Semaphore semaphoreOneway;

@@ -61,7 +61,7 @@ import com.alibaba.rocketmq.remoting.protocol.RemotingCommand;
  * @since 2013-7-13
  */
 public class NettyRemotingServer extends NettyRemotingAbstract implements RemotingServer {
-    private static final Logger log = LoggerFactory.getLogger(RemotingHelper.RemotingLogName);
+    private static final Logger log = LoggerFactory.getLogger(NettyRemotingServer.class);
     private final ServerBootstrap serverBootstrap;
     private final EventLoopGroup eventLoopGroup;
     private final NettyServerConfig nettyServerConfig;

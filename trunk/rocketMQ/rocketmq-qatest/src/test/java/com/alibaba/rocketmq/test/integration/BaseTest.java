@@ -17,7 +17,6 @@ import com.alibaba.rocketmq.broker.BrokerController;
 import com.alibaba.rocketmq.common.BrokerConfig;
 import com.alibaba.rocketmq.common.MQVersion;
 import com.alibaba.rocketmq.common.MixAll;
-import com.alibaba.rocketmq.common.constant.LoggerName;
 import com.alibaba.rocketmq.remoting.netty.NettyClientConfig;
 import com.alibaba.rocketmq.remoting.netty.NettyServerConfig;
 import com.alibaba.rocketmq.remoting.protocol.RemotingCommand;
@@ -93,7 +92,7 @@ public class BaseTest {
             configurator.setContext(lc);
             lc.reset();
             configurator.doConfigure(brokerConfig.getRocketmqHome() + "/conf/log4j_broker.xml");
-            final Logger log = LoggerFactory.getLogger(LoggerName.BrokerLoggerName);
+            final Logger log = LoggerFactory.getLogger(BaseTest.class);
 
             // 打印启动参数
             MixAll.printObjectProperties(log, brokerConfig);

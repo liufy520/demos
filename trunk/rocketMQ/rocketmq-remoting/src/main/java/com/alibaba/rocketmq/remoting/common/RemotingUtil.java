@@ -44,7 +44,7 @@ import org.slf4j.LoggerFactory;
  * @since 2013-7-13
  */
 public class RemotingUtil {
-    private static final Logger log = LoggerFactory.getLogger(RemotingHelper.RemotingLogName);
+    private static final Logger log = LoggerFactory.getLogger(RemotingUtil.class);
     public static final String OS_NAME = System.getProperty("os.name");
 
     private static boolean isLinuxPlatform = false;

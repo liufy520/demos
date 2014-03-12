@@ -30,7 +30,6 @@ import com.alibaba.rocketmq.common.ConfigManager;
 import com.alibaba.rocketmq.common.DataVersion;
 import com.alibaba.rocketmq.common.MixAll;
 import com.alibaba.rocketmq.common.TopicConfig;
-import com.alibaba.rocketmq.common.constant.LoggerName;
 import com.alibaba.rocketmq.common.constant.PermName;
 import com.alibaba.rocketmq.common.protocol.body.TopicConfigSerializeWrapper;
 import com.alibaba.rocketmq.store.schedule.ScheduleMessageService;
@@ -44,7 +43,7 @@ import com.alibaba.rocketmq.store.schedule.ScheduleMessageService;
  * @since 2013-7-26
  */
 public class TopicConfigManager extends ConfigManager {
-    private static final Logger log = LoggerFactory.getLogger(LoggerName.BrokerLoggerName);
+    private static final Logger log = LoggerFactory.getLogger(TopicConfigManager.class);
     private static final long LockTimeoutMillis = 3000;
     private transient final Lock lockTopicConfigTable = new ReentrantLock();
     private transient BrokerController brokerController;

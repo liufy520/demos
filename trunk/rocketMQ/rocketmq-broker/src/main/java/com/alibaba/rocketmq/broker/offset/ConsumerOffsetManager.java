@@ -26,7 +26,6 @@ import org.slf4j.LoggerFactory;
 
 import com.alibaba.rocketmq.broker.BrokerController;
 import com.alibaba.rocketmq.common.ConfigManager;
-import com.alibaba.rocketmq.common.constant.LoggerName;
 import com.alibaba.rocketmq.remoting.protocol.RemotingSerializable;
 
 
@@ -37,7 +36,7 @@ import com.alibaba.rocketmq.remoting.protocol.RemotingSerializable;
  * @since 2013-8-11
  */
 public class ConsumerOffsetManager extends ConfigManager {
-    private static final Logger log = LoggerFactory.getLogger(LoggerName.BrokerLoggerName);
+    private static final Logger log = LoggerFactory.getLogger(ConsumerOffsetManager.class);
     private static final String TOPIC_GROUP_SEPARATOR = "@";
 
     private ConcurrentHashMap<String/* topic@group */, ConcurrentHashMap<Integer, Long>> offsetTable =

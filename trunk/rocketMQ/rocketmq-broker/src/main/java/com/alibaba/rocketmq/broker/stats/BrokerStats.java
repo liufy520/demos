@@ -18,7 +18,6 @@ package com.alibaba.rocketmq.broker.stats;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.alibaba.rocketmq.common.constant.LoggerName;
 import com.alibaba.rocketmq.store.DefaultMessageStore;
 
 
@@ -29,7 +28,7 @@ import com.alibaba.rocketmq.store.DefaultMessageStore;
  * @since 2013-10-23
  */
 public class BrokerStats {
-    private static final Logger log = LoggerFactory.getLogger(LoggerName.BrokerLoggerName);
+    private static final Logger log = LoggerFactory.getLogger(BrokerStats.class);
 
     // 昨天凌晨00:00:00记录的put消息总数
     private volatile long msgPutTotalYesterdayMorning;

@@ -26,7 +26,6 @@ import com.alibaba.rocketmq.broker.BrokerController;
 import com.alibaba.rocketmq.common.ConfigManager;
 import com.alibaba.rocketmq.common.DataVersion;
 import com.alibaba.rocketmq.common.MixAll;
-import com.alibaba.rocketmq.common.constant.LoggerName;
 import com.alibaba.rocketmq.common.subscription.SubscriptionGroupConfig;
 import com.alibaba.rocketmq.remoting.protocol.RemotingSerializable;
 
@@ -38,7 +37,7 @@ import com.alibaba.rocketmq.remoting.protocol.RemotingSerializable;
  * @since 2013-7-26
  */
 public class SubscriptionGroupManager extends ConfigManager {
-    private static final Logger log = LoggerFactory.getLogger(LoggerName.BrokerLoggerName);
+    private static final Logger log = LoggerFactory.getLogger(SubscriptionGroupManager.class);
     private transient BrokerController brokerController;
 
     // 订阅组

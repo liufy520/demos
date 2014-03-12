@@ -20,7 +20,7 @@ package com.alibaba.rocketmq.common.constant;
  */
 public class LoggerName {
     public static final String NamesrvLoggerName = "RocketmqNamesrv";
-    public static final String BrokerLoggerName = "RocketmqBroker";
+//    public static final String BrokerLoggerName = "RocketmqBroker";
     public static final String ClientLoggerName = "RocketmqClient";
     public static final String ToolsLoggerName = "RocketmqTools";
     public static final String CommonLoggerName = "RocketmqCommon";

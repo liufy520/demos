@@ -1,0 +1,33 @@
+{
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "/Users/liufengyu/work/mygit/demos/trunk/mysite"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/Library/Python/2.7/site-packages/django"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/Library/Python/2.7/site-packages/tornado"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/Users/liufengyu/work/mygit/demos/trunk/tornadotest"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/Users/liufengyu/work/mygit/demos/trunk/pytest"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/Users/liufengyu/work/mygit/demos/trunk/nodejs开发指南"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/Users/liufengyu/work/mygit/microblog"
+		}
+	]
+}

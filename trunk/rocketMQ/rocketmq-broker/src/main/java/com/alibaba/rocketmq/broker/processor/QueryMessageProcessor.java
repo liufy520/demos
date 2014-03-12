@@ -26,7 +26,6 @@ import org.slf4j.LoggerFactory;
 import com.alibaba.rocketmq.broker.BrokerController;
 import com.alibaba.rocketmq.broker.pagecache.OneMessageTransfer;
 import com.alibaba.rocketmq.broker.pagecache.QueryMessageTransfer;
-import com.alibaba.rocketmq.common.constant.LoggerName;
 import com.alibaba.rocketmq.common.protocol.MQProtos.MQRequestCode;
 import com.alibaba.rocketmq.common.protocol.MQProtos.MQResponseCode;
 import com.alibaba.rocketmq.common.protocol.header.QueryMessageRequestHeader;
@@ -47,7 +46,7 @@ import com.alibaba.rocketmq.store.SelectMapedBufferResult;
  * @since 2013-7-26
  */
 public class QueryMessageProcessor implements NettyRequestProcessor {
-    private static final Logger log = LoggerFactory.getLogger(LoggerName.BrokerLoggerName);
+    private static final Logger log = LoggerFactory.getLogger(QueryMessageProcessor.class);
 
     private final BrokerController brokerController;
 

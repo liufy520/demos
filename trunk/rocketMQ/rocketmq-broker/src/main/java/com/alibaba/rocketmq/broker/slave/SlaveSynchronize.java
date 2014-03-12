@@ -23,7 +23,6 @@ import org.slf4j.LoggerFactory;
 import com.alibaba.rocketmq.broker.BrokerController;
 import com.alibaba.rocketmq.broker.subscription.SubscriptionGroupManager;
 import com.alibaba.rocketmq.common.MixAll;
-import com.alibaba.rocketmq.common.constant.LoggerName;
 import com.alibaba.rocketmq.common.protocol.body.ConsumerOffsetSerializeWrapper;
 import com.alibaba.rocketmq.common.protocol.body.SubscriptionGroupWrapper;
 import com.alibaba.rocketmq.common.protocol.body.TopicConfigSerializeWrapper;
@@ -37,7 +36,7 @@ import com.alibaba.rocketmq.common.protocol.body.TopicConfigSerializeWrapper;
  * @since 2013-7-8
  */
 public class SlaveSynchronize {
-    private static final Logger log = LoggerFactory.getLogger(LoggerName.BrokerLoggerName);
+    private static final Logger log = LoggerFactory.getLogger(SlaveSynchronize.class);
     private final BrokerController brokerController;
     private volatile String masterAddr = null;
 

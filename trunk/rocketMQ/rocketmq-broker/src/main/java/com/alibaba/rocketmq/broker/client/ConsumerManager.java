@@ -24,7 +24,6 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.alibaba.rocketmq.common.constant.LoggerName;
 import com.alibaba.rocketmq.common.consumer.ConsumeFromWhere;
 import com.alibaba.rocketmq.common.protocol.heartbeat.ConsumeType;
 import com.alibaba.rocketmq.common.protocol.heartbeat.MessageModel;
@@ -40,7 +39,7 @@ import com.alibaba.rocketmq.remoting.common.RemotingUtil;
  * @since 2013-7-26
  */
 public class ConsumerManager {
-    private static final Logger log = LoggerFactory.getLogger(LoggerName.BrokerLoggerName);
+    private static final Logger log = LoggerFactory.getLogger(ConsumerManager.class);
     private final ConcurrentHashMap<String/* Group */, ConsumerGroupInfo> consumerTable =
             new ConcurrentHashMap<String, ConsumerGroupInfo>(1024);
 
@@ -118,6 +117,7 @@ public class ConsumerManager {
         for (String group : this.consumerTable.keySet()) {
             final ConsumerGroupInfo info = this.consumerTable.get(group);
             if (info != null) {
+                @SuppressWarnings({"rawtypes", "unchecked" })
                 ConcurrentHashMap<Channel, ClientChannelInfo> cloneChannels =
                         new ConcurrentHashMap(info.getChannelInfoTable());
                 for (Map.Entry<Channel, ClientChannelInfo> entry : cloneChannels.entrySet()) {

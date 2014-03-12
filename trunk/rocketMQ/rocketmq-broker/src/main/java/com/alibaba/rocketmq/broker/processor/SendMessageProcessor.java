@@ -32,7 +32,6 @@ import com.alibaba.rocketmq.broker.digestlog.SendmsgLiveMoniter;
 import com.alibaba.rocketmq.common.MixAll;
 import com.alibaba.rocketmq.common.TopicConfig;
 import com.alibaba.rocketmq.common.TopicFilterType;
-import com.alibaba.rocketmq.common.constant.LoggerName;
 import com.alibaba.rocketmq.common.constant.PermName;
 import com.alibaba.rocketmq.common.help.FAQUrl;
 import com.alibaba.rocketmq.common.message.MessageConst;
@@ -61,7 +60,7 @@ import com.alibaba.rocketmq.store.PutMessageResult;
  * @since 2013-7-26
  */
 public class SendMessageProcessor implements NettyRequestProcessor {
-    private static final Logger log = LoggerFactory.getLogger(LoggerName.BrokerLoggerName);
+    private static final Logger log = LoggerFactory.getLogger(SendMessageProcessor.class);
 
     private final static int DLQ_NUMS_PER_GROUP = 1;
     private final BrokerController brokerController;

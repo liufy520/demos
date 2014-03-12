@@ -30,7 +30,6 @@ import com.alibaba.rocketmq.broker.digestlog.PullmsgLiveMoniter;
 import com.alibaba.rocketmq.broker.longpolling.PullRequest;
 import com.alibaba.rocketmq.broker.pagecache.ManyMessageTransfer;
 import com.alibaba.rocketmq.common.TopicConfig;
-import com.alibaba.rocketmq.common.constant.LoggerName;
 import com.alibaba.rocketmq.common.constant.PermName;
 import com.alibaba.rocketmq.common.filter.FilterAPI;
 import com.alibaba.rocketmq.common.help.FAQUrl;
@@ -57,7 +56,7 @@ import com.alibaba.rocketmq.store.config.BrokerRole;
  * @since 2013-7-26
  */
 public class PullMessageProcessor implements NettyRequestProcessor {
-    private static final Logger log = LoggerFactory.getLogger(LoggerName.BrokerLoggerName);
+    private static final Logger log = LoggerFactory.getLogger(PullMessageProcessor.class);
 
     private final BrokerController brokerController;
 

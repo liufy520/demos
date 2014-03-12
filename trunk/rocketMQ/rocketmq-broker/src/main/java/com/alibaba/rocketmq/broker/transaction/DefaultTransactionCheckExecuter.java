@@ -20,7 +20,6 @@ import org.slf4j.LoggerFactory;
 
 import com.alibaba.rocketmq.broker.BrokerController;
 import com.alibaba.rocketmq.broker.client.ClientChannelInfo;
-import com.alibaba.rocketmq.common.constant.LoggerName;
 import com.alibaba.rocketmq.common.protocol.header.CheckTransactionStateRequestHeader;
 import com.alibaba.rocketmq.store.SelectMapedBufferResult;
 import com.alibaba.rocketmq.store.transaction.TransactionCheckExecuter;
@@ -33,7 +32,7 @@ import com.alibaba.rocketmq.store.transaction.TransactionCheckExecuter;
  * @since 2013-7-26
  */
 public class DefaultTransactionCheckExecuter implements TransactionCheckExecuter {
-    private static final Logger log = LoggerFactory.getLogger(LoggerName.BrokerLoggerName);
+    private static final Logger log = LoggerFactory.getLogger(DefaultTransactionCheckExecuter.class);
     private final BrokerController brokerController;
 
 
